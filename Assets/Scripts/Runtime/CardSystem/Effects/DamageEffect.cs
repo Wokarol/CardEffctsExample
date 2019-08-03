@@ -5,10 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Effects/Damage")]
 public class DamageEffect : CardBehaviour
 {
-    public override DataTypes DataMask => DataTypes.Strenght;
+    public override DataTypes DataMask => DataTypes.Strength;
 
     public override void Execute(Game game, Actor me, Actor target, CardData data)
     {
-        game.Attack(me, target, data.Strenght);
+        game.Attack(me, target, data.Strength);
     }
 }

@@ -52,21 +52,21 @@ public class Card : ScriptableObject
 // All types of data that can be shown
 [Flags]
 public enum DataTypes {
-    Strenght = 1,
+    Strength = 1,
     Cost = 2 }
 
 [Serializable]
 public struct CardData
 {
-    [SerializeField] private int strenght;
+    [SerializeField] private int strength;
     [SerializeField] private int cost;
 
-    public int Strenght => strenght;
+    public int Strength => strength;
     public int Cost => cost;
 
-    public CardData(int strenght, int cost)
+    public CardData(int strength, int cost)
     {
-        this.strenght = strenght;
+        this.strength = strength;
         this.cost = cost;
     }
 
@@ -76,7 +76,7 @@ public struct CardData
         var rect = new Rect(x, y, width, 15);
 
         var propertyMap = new Dictionary<DataTypes, string>() {
-            { DataTypes.Strenght, "strenght" },
+            { DataTypes.Strength, "strength" },
             { DataTypes.Cost, "cost" }
         };
         foreach (var p in propertyMap) {
