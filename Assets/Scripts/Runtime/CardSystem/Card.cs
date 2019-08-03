@@ -76,8 +76,8 @@ public struct CardData
         var rect = new Rect(x, y, width, 15);
 
         var propertyMap = new Dictionary<DataTypes, string>() {
-            { DataTypes.Strength, "strength" },
-            { DataTypes.Cost, "cost" }
+            { DataTypes.Strength, nameof(strength) },
+            { DataTypes.Cost, nameof(cost) }
         };
         foreach (var p in propertyMap) {
             if (types.HasFlag(p.Key)) {
